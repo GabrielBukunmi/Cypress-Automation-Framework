@@ -7,6 +7,10 @@ module.exports = defineConfig({
   env:{
     url:"https:rahulshettyacademy.com"
   },
+  //retries is used to try the failed test cases again
+  retries:{
+    runMode:1
+  },
   projectId: "6x76ku",
   e2e: {
     setupNodeEvents(on, config) {
