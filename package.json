@@ -5,15 +5,20 @@
   "main": "index.js",
   "scripts": {
     "open": "node_modules\\.bin\\cypress open",
-    "test":"node_modules\\.bin\\cypress run",
+    "Openbynpx":"npx cypress open",
+    "test": "node_modules\\.bin\\cypress run",
     "headedtest": "npm run test-- --headed",
-    "chrometest":"npm run headedtest-- --browser chrome",
-    "recordTest":"npm run open-- --record --key e91401ae-ebdc-4c22-8ff0-6d7cd8bb7096 --reporter mochawesome"
+    "chrometest": "npm run headedtest-- --browser chrome",
+    "recordTest": "npm run test-- --record --key e91401ae-ebdc-4c22-8ff0-6d7cd8bb7096 --reporter mochawesome"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^12.3.0",
     "cypress-iframe": "^1.0.1"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.2",
+    "cypress-file-upload": "^5.0.8"
   }
 }

@@ -6,6 +6,10 @@ describe('PRIMUS PLUS',function(){
             this.data=data;
         })
     })
+// Login before each test
+    this.beforeEach(function(){
+
+        })
 
     it('Login', function(){
         cy.visit('https://192.168.90.157:12012')
@@ -13,6 +17,12 @@ describe('PRIMUS PLUS',function(){
         cy.get('[name="password"]').type(this.data.password)
         cy.get('button[type="submit"]').click()
         cy.wait(5000)
+        cy.get('.navbar-brand > img').should('be.visible')
+
+    })
+
+    it('Payment Module', function(){
+
     })
 })
 
